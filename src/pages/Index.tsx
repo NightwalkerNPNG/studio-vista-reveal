@@ -17,7 +17,7 @@ import { testimonials } from "@/data/testimonialsData";
 import { press } from "@/data/pressData";
 
 const Index = () => {
-  const [language, setLanguage] = useState<"en" | "ar">("en");
+  const [language, setLanguage] = useState<"en" | "ar">("ar");
   const translations = language === "en" ? en : ar;
 
   // Update the document direction and add smooth scrolling based on the selected language
@@ -35,7 +35,6 @@ const Index = () => {
 
   return (
     <div className={`min-h-screen ${isRtl ? "font-inter rtl" : "font-inter"}`}>
-      <LanguageToggle onToggle={handleLanguageToggle} currentLanguage={language} />
       <Navbar isRtl={isRtl} translations={translations.navigation} />
       
       <main>
@@ -60,6 +59,8 @@ const Index = () => {
         <BookingSection isRtl={isRtl} translations={translations.booking} />
         <ContactSection isRtl={isRtl} translations={translations.contact} />
       </main>
+      
+      <LanguageToggle onToggle={handleLanguageToggle} currentLanguage={language} />
     </div>
   );
 };

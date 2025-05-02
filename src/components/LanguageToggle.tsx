@@ -9,12 +9,12 @@ interface LanguageToggleProps {
 
 const LanguageToggle = ({ onToggle, currentLanguage }: LanguageToggleProps) => {
   return (
-    <div className="fixed top-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50">
       <Button 
         variant="outline" 
         size="sm" 
         onClick={() => onToggle(currentLanguage === "en" ? "ar" : "en")}
-        className="bg-white/80 backdrop-blur-sm hover:bg-white"
+        className="bg-white/80 backdrop-blur-sm hover:bg-white shadow-md"
       >
         <Globe size={16} className="mr-2" />
         {currentLanguage === "en" ? "العربية" : "English"}

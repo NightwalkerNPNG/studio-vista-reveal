@@ -1,6 +1,5 @@
 
 import { ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
   isRtl: boolean;
@@ -13,14 +12,6 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ isRtl, translations }: HeroSectionProps) => {
-  // Scroll to booking section when CTA button is clicked
-  const scrollToBooking = () => {
-    const bookingSection = document.getElementById('booking');
-    if (bookingSection) {
-      bookingSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section 
       id="hero"
@@ -44,14 +35,6 @@ const HeroSection = ({ isRtl, translations }: HeroSectionProps) => {
         <p className="mt-6 text-xl md:text-2xl text-white/90 max-w-xl opacity-0 animate-fade-in animate-delay-200">
           {translations.tagline}
         </p>
-        
-        <Button 
-          size="lg"
-          className="mt-10 bg-studio-gold hover:bg-studio-copper text-white opacity-0 animate-fade-in animate-delay-300"
-          onClick={scrollToBooking}
-        >
-          {translations.cta}
-        </Button>
         
         {/* Scroll Down Indicator */}
         <div className="absolute bottom-10 opacity-0 animate-fade-in animate-delay-500">
