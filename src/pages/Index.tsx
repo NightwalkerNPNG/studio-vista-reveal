@@ -20,10 +20,11 @@ const Index = () => {
   const [language, setLanguage] = useState<"en" | "ar">("en");
   const translations = language === "en" ? en : ar;
 
-  // Update the document direction based on the selected language
+  // Update the document direction and add smooth scrolling based on the selected language
   useEffect(() => {
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
     document.documentElement.lang = language;
+    document.documentElement.style.scrollBehavior = 'smooth';
   }, [language]);
   
   const handleLanguageToggle = (newLanguage: "en" | "ar") => {

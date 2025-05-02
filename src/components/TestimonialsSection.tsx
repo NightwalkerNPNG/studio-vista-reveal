@@ -6,8 +6,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 interface Testimonial {
   id: number;
   name: string;
+  nameAr?: string;
   role?: string;
+  roleAr?: string;
   quote: string;
+  quoteAr?: string;
   image?: string;
 }
 
@@ -60,6 +63,11 @@ const TestimonialsSection = ({ isRtl, translations, testimonials }: Testimonials
 
   const activeTestimonial = testimonials[activeIndex];
 
+  // Use Arabic content if available and in RTL mode
+  const displayName = isRtl && activeTestimonial.nameAr ? activeTestimonial.nameAr : activeTestimonial.name;
+  const displayRole = isRtl && activeTestimonial.roleAr ? activeTestimonial.roleAr : activeTestimonial.role;
+  const displayQuote = isRtl && activeTestimonial.quoteAr ? activeTestimonial.quoteAr : activeTestimonial.quote;
+
   return (
     <section 
       id="testimonials" 
@@ -80,25 +88,25 @@ const TestimonialsSection = ({ isRtl, translations, testimonials }: Testimonials
                 {activeTestimonial.image ? (
                   <img
                     src={activeTestimonial.image}
-                    alt={activeTestimonial.name}
+                    alt={displayName}
                     className="w-full h-full object-cover"
                   />
                 ) : (
                   <div className="w-full h-full bg-studio-stone flex items-center justify-center text-studio-charcoal">
-                    {activeTestimonial.name.charAt(0)}
+                    {displayName.charAt(0)}
                   </div>
                 )}
               </div>
             </div>
             
             <blockquote className="text-xl md:text-2xl italic font-playfair mb-6">
-              "{activeTestimonial.quote}"
+              "{displayQuote}"
             </blockquote>
             
             <div className="text-studio-charcoal">
-              <p className="font-medium">{activeTestimonial.name}</p>
-              {activeTestimonial.role && (
-                <p className="text-sm text-gray-500">{activeTestimonial.role}</p>
+              <p className="font-medium">{displayName}</p>
+              {displayRole && (
+                <p className="text-sm text-gray-500">{displayRole}</p>
               )}
             </div>
           </div>

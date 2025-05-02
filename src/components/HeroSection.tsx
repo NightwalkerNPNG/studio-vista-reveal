@@ -13,6 +13,14 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ isRtl, translations }: HeroSectionProps) => {
+  // Scroll to booking section when CTA button is clicked
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById('booking');
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section 
       id="hero"
@@ -30,7 +38,7 @@ const HeroSection = ({ isRtl, translations }: HeroSectionProps) => {
       {/* Hero Content */}
       <div className="relative h-full flex flex-col justify-center items-center text-center px-6 z-10">
         <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-playfair font-medium tracking-wide opacity-0 animate-fade-in">
-          {translations.studioName}
+          STUDIO VISTA
         </h1>
         
         <p className="mt-6 text-xl md:text-2xl text-white/90 max-w-xl opacity-0 animate-fade-in animate-delay-200">
@@ -40,6 +48,7 @@ const HeroSection = ({ isRtl, translations }: HeroSectionProps) => {
         <Button 
           size="lg"
           className="mt-10 bg-studio-gold hover:bg-studio-copper text-white opacity-0 animate-fade-in animate-delay-300"
+          onClick={scrollToBooking}
         >
           {translations.cta}
         </Button>
@@ -49,6 +58,10 @@ const HeroSection = ({ isRtl, translations }: HeroSectionProps) => {
           <a 
             href="#about" 
             className="flex flex-col items-center text-white/80 hover:text-white transition-colors"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             <span className="text-sm mb-2">{translations.discoverMore}</span>
             <ArrowDown size={20} className="animate-bounce" />

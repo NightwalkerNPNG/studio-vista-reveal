@@ -17,6 +17,10 @@ interface ContactSectionProps {
 }
 
 const ContactSection = ({ isRtl, translations }: ContactSectionProps) => {
+  // Use Arabic phone number format when in RTL mode
+  const phoneNumber = isRtl ? "+963 11 123 4567" : "+1 234 567 89";
+  const emailAddress = "info@studiovista.com";
+  
   return (
     <section 
       id="contact" 
@@ -34,18 +38,18 @@ const ContactSection = ({ isRtl, translations }: ContactSectionProps) => {
             
             <div className="space-y-4">
               <div className="flex items-start">
-                <MapPin size={20} className="mt-1 mr-3 text-studio-gold" />
+                <MapPin size={20} className={`mt-1 ${isRtl ? 'ml-3' : 'mr-3'} text-studio-gold`} />
                 <span>{translations.address}</span>
               </div>
               
               <div className="flex items-center">
-                <Phone size={20} className="mr-3 text-studio-gold" />
-                <span>{translations.phoneLabel}: <a href="tel:+123456789" className="hover:text-studio-gold">+1 234 567 89</a></span>
+                <Phone size={20} className={isRtl ? 'ml-3' : 'mr-3'} />
+                <span>{translations.phoneLabel}: <a href={`tel:${phoneNumber.replace(/\s/g, '')}`} className="hover:text-studio-gold">{phoneNumber}</a></span>
               </div>
               
               <div className="flex items-center">
-                <Mail size={20} className="mr-3 text-studio-gold" />
-                <span>{translations.emailLabel}: <a href="mailto:info@studiovista.com" className="hover:text-studio-gold">info@studiovista.com</a></span>
+                <Mail size={20} className={isRtl ? 'ml-3' : 'mr-3'} />
+                <span>{translations.emailLabel}: <a href={`mailto:${emailAddress}`} className="hover:text-studio-gold">{emailAddress}</a></span>
               </div>
             </div>
             

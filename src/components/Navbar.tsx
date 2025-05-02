@@ -29,13 +29,22 @@ const Navbar = ({ isRtl, translations }: NavbarProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false);
+    }
+  };
+
   const menuItems = [
-    { text: translations.home, href: "#hero" },
-    { text: translations.about, href: "#about" },
-    { text: translations.projects, href: "#projects" },
-    { text: translations.services, href: "#services" },
-    { text: translations.testimonials, href: "#testimonials" },
-    { text: translations.contact, href: "#contact" },
+    { text: translations.home, href: "#hero", id: "hero" },
+    { text: translations.about, href: "#about", id: "about" },
+    { text: translations.projects, href: "#projects", id: "projects" },
+    { text: translations.services, href: "#services", id: "services" },
+    { text: translations.testimonials, href: "#testimonials", id: "testimonials" },
+    { text: translations.contact, href: "#contact", id: "contact" },
   ];
 
   return (
@@ -55,11 +64,16 @@ const Navbar = ({ isRtl, translations }: NavbarProps) => {
               key={index}
               href={item.href}
               className="text-sm hover:text-studio-gold transition-colors"
+              onClick={(e) => handleNavClick(e, item.id)}
             >
               {item.text}
             </a>
           ))}
-          <Button variant="default" className="ml-4 bg-studio-gold hover:bg-studio-copper text-white">
+          <Button 
+            variant="default" 
+            className="ml-4 bg-studio-gold hover:bg-studio-copper text-white"
+            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             {translations.book}
           </Button>
         </nav>
@@ -86,7 +100,7 @@ const Navbar = ({ isRtl, translations }: NavbarProps) => {
               key={index}
               href={item.href}
               className="text-base py-2 hover:text-studio-gold transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, item.id)}
             >
               {item.text}
             </a>
@@ -94,7 +108,10 @@ const Navbar = ({ isRtl, translations }: NavbarProps) => {
           <Button 
             variant="default" 
             className="mt-4 bg-studio-gold hover:bg-studio-copper text-white"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => {
+              document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+              setMobileMenuOpen(false);
+            }}
           >
             {translations.book}
           </Button>

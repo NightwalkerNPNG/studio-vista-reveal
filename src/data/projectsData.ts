@@ -13,7 +13,11 @@ export const projects = [
       "https://images.unsplash.com/photo-1600607687644-c7f34b1d6f8f?q=80&w=2070",
       "https://images.unsplash.com/photo-1600566752355-35401a499a2c?q=80&w=2074",
       "https://images.unsplash.com/photo-1600566752734-07169e8a6a3c?q=80&w=2070"
-    ]
+    ],
+    // Arabic translations
+    titleAr: "أناقة عصرية",
+    locationAr: "مشروع دمر",
+    styleAr: "معاصر"
   },
   {
     id: 2,
@@ -27,7 +31,11 @@ export const projects = [
       "https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=1932",
       "https://images.unsplash.com/photo-1618219740975-d40978bb7378?q=80&w=2070",
       "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000"
-    ]
+    ],
+    // Arabic translations
+    titleAr: "شقة حضرية",
+    locationAr: "المزة",
+    styleAr: "صناعي"
   },
   {
     id: 3,
@@ -41,7 +49,11 @@ export const projects = [
       "https://images.unsplash.com/photo-1616137422277-702ffdd5b398?q=80&w=1945",
       "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?q=80&w=1936",
       "https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?q=80&w=2070"
-    ]
+    ],
+    // Arabic translations
+    titleAr: "منتجع ساحلي",
+    locationAr: "اللاذقية",
+    styleAr: "ساحلي"
   },
   {
     id: 4,
@@ -55,7 +67,11 @@ export const projects = [
       "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=2070",
       "https://images.unsplash.com/photo-1600607688066-89c6ae39c084?q=80&w=2070",
       "https://images.unsplash.com/photo-1648166533336-3a4fafd976c1?q=80&w=1906"
-    ]
+    ],
+    // Arabic translations
+    titleAr: "شقة فاخرة",
+    locationAr: "أبو رمانة",
+    styleAr: "انتقالي"
   },
   {
     id: 5,
@@ -69,7 +85,11 @@ export const projects = [
       "https://images.unsplash.com/photo-1616627974186-f903a661b1a1?q=80&w=1923",
       "https://images.unsplash.com/photo-1616627561950-9834c8702111?q=80&w=1923",
       "https://images.unsplash.com/photo-1618221389889-2637a70b2b4e?q=80&w=1932"
-    ]
+    ],
+    // Arabic translations
+    titleAr: "إقامة بسيطة",
+    locationAr: "يعفور",
+    styleAr: "بسيط"
   },
   {
     id: 6,
@@ -83,6 +103,10 @@ export const projects = [
       "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1780",
       "https://images.unsplash.com/photo-1632935190851-3a1cd5905fec?q=80&w=1964",
       "https://images.unsplash.com/photo-1616137422430-6d94aa5c3b51?q=80&w=1945"
-    ]
+    ],
+    // Arabic translations
+    titleAr: "إحياء كلاسيكي",
+    locationAr: "المالكي",
+    styleAr: "تقليدي"
   }
 ];
