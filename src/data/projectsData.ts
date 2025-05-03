@@ -79,12 +79,12 @@ export const projects = [
     location: "Boston",
     year: "2024",
     style: "Minimalist",
-    image: "https://images.unsplash.com/photo-1616137422283-a941d9e40e31?q=80&w=1945",
+    image: "https://images.unsplash.com/photo-1622133306630-7de6ecf48c25?q=80&w=2070",
     images: [
-      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?q=80&w=3011",
-      "https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=3648",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=6000",
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=2965"
+      "https://images.unsplash.com/photo-1640458683528-692e64149670?q=80&w=2071",
+      "https://images.unsplash.com/photo-1649358707182-64f970626a90?q=80&w=1964",
+      "https://images.unsplash.com/photo-1675784433310-5143fbfe1d5f?q=80&w=1974",
+      "https://images.unsplash.com/photo-1602872030490-4a104f73027a?q=80&w=2070"
     ],
     // Arabic translations
     titleAr: "إقامة بسيطة",
