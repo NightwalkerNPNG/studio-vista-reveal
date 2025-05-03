@@ -3,7 +3,7 @@ export const ar = {
   // Navigation
   navigation: {
     home: "الرئيسية",
-    about: "عن الاستوديو",
+    about: "عنا",
     projects: "المشاريع",
     services: "الخدمات",
     testimonials: "آراء العملاء",
