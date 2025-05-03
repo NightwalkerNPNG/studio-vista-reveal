@@ -58,20 +58,22 @@ const Navbar = ({ isRtl, translations }: NavbarProps) => {
         <div className="font-playfair text-2xl font-medium tracking-wide">STUDIO VISTA</div>
         
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center space-x-8">
-          {menuItems.map((item, index) => (
-            <a 
-              key={index}
-              href={item.href}
-              className="text-sm hover:text-studio-gold transition-colors"
-              onClick={(e) => handleNavClick(e, item.id)}
-            >
-              {item.text}
-            </a>
-          ))}
+        <nav className="hidden lg:flex items-center">
+          <div className={`flex items-center ${isRtl ? "space-x-reverse space-x-8" : "space-x-8"}`}>
+            {menuItems.map((item, index) => (
+              <a 
+                key={index}
+                href={item.href}
+                className="text-sm hover:text-studio-gold transition-colors px-1"
+                onClick={(e) => handleNavClick(e, item.id)}
+              >
+                {item.text}
+              </a>
+            ))}
+          </div>
           <Button 
             variant="default" 
-            className="ml-4 bg-studio-gold hover:bg-studio-copper text-white"
+            className={`${isRtl ? "mr-6" : "ml-6"} bg-studio-gold hover:bg-studio-copper text-white`}
             onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
           >
             {translations.book}
