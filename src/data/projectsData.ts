@@ -81,10 +81,10 @@ export const projects = [
     style: "Minimalist",
     image: "https://images.unsplash.com/photo-1616137422283-a941d9e40e31?q=80&w=1945",
     images: [
-      "https://images.unsplash.com/photo-1616627878362-d0b884643bab?q=80&w=1937",
-      "https://images.unsplash.com/photo-1616627974186-f903a661b1a1?q=80&w=1923",
-      "https://images.unsplash.com/photo-1616627561950-9834c8702111?q=80&w=1923",
-      "https://images.unsplash.com/photo-1618221389889-2637a70b2b4e?q=80&w=1932"
+      "https://images.unsplash.com/photo-1721322800607-8c38375eef04?q=80&w=3011",
+      "https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=3648",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=6000",
+      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=2965"
     ],
     // Arabic translations
     titleAr: "إقامة بسيطة",
